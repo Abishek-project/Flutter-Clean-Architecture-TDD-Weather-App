@@ -17,7 +17,7 @@ class WeatherDataSourceImpl extends WeatherDataSource {
         Urls.currentWeatherByName(cityName),
       ),
     );
-    print(response);
+
     if (response.statusCode == 200) {
       return WeatherModel.fromJson(
         jsonDecode(response.body),

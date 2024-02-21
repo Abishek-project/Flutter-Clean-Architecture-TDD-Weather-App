@@ -14,7 +14,6 @@ class WeatherRepositoryImpl extends WeatherRepository {
   Future<WeatherEntity> fetchWeatherData(String cityName) async {
     try {
       final response = await weatherDataSource.getCurrentWeather(cityName);
-      print(response);
       return response.toEntity();
     } on SocketException {
       // Handle SocketException (e.g., no internet connection)

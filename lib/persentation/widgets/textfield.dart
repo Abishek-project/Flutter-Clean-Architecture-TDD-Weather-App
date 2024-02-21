@@ -16,6 +16,7 @@ class EnterCityTextField extends StatelessWidget {
     return Align(
       alignment: Alignment.bottomCenter,
       child: TextFormField(
+          key: const Key("text-field"),
           textAlign: TextAlign.start,
           style: const TextStyle(color: Colors.white, fontSize: 18),
           decoration: InputDecoration(
